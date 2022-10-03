@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CCSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./CCSS/celdas.css">
+    <link rel="stylesheet" href="./CCSS/menu.css">
+    <link rel="stylesheet" href="./CCSS/tab.css" />
+    <script
+      src="https://kit.fontawesome.com/7e5b2d153f.js"
+      crossorigin="anonymous"
+    ></script>
+
+  
+    <title>Encuesta</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="nav">
+          <button class="nav-toggle" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-menu">
+            <li class="nav-menu-item">
+              <a href="index.html" class="nav-menu-link nav-link">Insertar</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="Listar.html" class="nav-menu-link nav-link" onclick="listar_usuarios()">Listar</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    <main class="container-fluid">
+
+        <center>
+            <h2>CUESTIONARIO: PREVALENCIA DE SECUELAS EN PACIENTES CON ANTECEDENTE
+                DE TB SENSIBLE</h2>
+        </center>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Parte1')">Parte 1</button>
+            <button class="tablinks" onclick="openCity(event, 'Parte2')">Parte 2</button>
+            <button class="tablinks" onclick="openCity(event, 'Parte3')">INFORME DE RADIOGRAFÍA</button>
+            <button class="tablinks" onclick="openCity(event, 'Parte4')">INFORME DE TOMOGRAFÍA</button>
+        </div>
+
+
+        <form class="car card-body" id="formulario" method="POST">
+
+            <div id="Parte1" name="Parte1" class="tabcontent">
+
+                <div class="form-group">
+                    <input type="hidden" id="id" name="id">
+                    Nro de Encuesta: <input type="number" id="id_encuesta" name="id_encuesta" min="0"
+                        oninput="validity.valid||(value='');" placeholder="Nro Encuesta" class="form-control" autofocus
+                        required=""><br>
+
+                    1. Nombre del CCSS: <select id="p1" name="p1" placeholder="Selecione un CCSS"
+                        class="form-control input-lg" autofocus>
+                        <option value="0">Selecione un CCSS</option>
+                        <option value="1">C.S. GANIMEDES</option>
+                        <option value="2">C.S. HUASCAR XV</option>
+                        <option value="3">C.S. J. C. MARIATEGUI</option>
+                        <option value="4">C.S. JAIME ZUBIETA</option>
+                        <option value="5">C.S. JUAN PEREZ CARRANZA</option>
+                        <option value="6">C.S. SAN COSME</option>
+                        <option value="7">C.S. SAN SEBASTIAN</option>
+                        <option value="8">C.S.M.I. EL PORVENIR</option>
+                    </select><br>
+
+                    <div class="form-group">
+                        2. Nombres y Apellidos: <input type="text" id="p2" name="p2" placeholder="Nombres y apellidos"
+                            class="form-control" autofocus><br>
+                    </div>
+
+                    <div class="form-group">
+                        4. Edad: <input type="number" id="p4" name="p4" min="0" oninput="validity.valid||(value='');"
+                            placeholder="Edad" class="form-control" autofocus><br>
+                    </div>
+
+                    <div class="form-goup">
+                        5. Sexo: <select id="p5" name="p5" placeholder="Selecione sexo" class="form-control input-lg"
+                            autofocus>
+                            <option value="0">Selecione sexo</option>
+                            <option value="1">Femenino</option>
+                            <option value="2">Masculino</option>
+                        </select><br>
+                    </div>
+
+                    <div class="form-group">
+                        Teléfono: <input type="number" id="ptelf" name="ptelf" min="0"
+                            oninput="validity.valid||(value='');" placeholder="Número telefónico" class="form-control"
+                            autofocus><br>
+                    </div>
+
+                    <div class="form-group">
+                        6. Ocupación:
+                        <select name="p6" id="p6" placeholder="Selecione Ocupación" class="form-control" autofocus>
+                            <option value="0">Selecione una Ocupación</option>
+                            <option value="1">Obrero</option>
+                            <option value="2">Independiente en industria de</option>
+                            <option value="3">Empleado</option>
+                            <option value="4">Su casa</option>
+                            <option value="5">Estudiante</option>
+                            <option value="6">Desocupado</option>
+                            <option value="7">Otro</option>
+                        </select><br>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="p6d" name="p6d" placeholder="Descripción de Ocupación"
+                            class="form-control" autofocus><br>
+                    </div>
+
+                    <div class="form-group" style="text-align:center;">
+                        <table class="defaul" style="margin: 0 auto;">
+
+                            <tr>
+                                <td>7. Año de inicio tratamiento TB:</td>
+                                <td> 
+                                    <select name="p7" id="p7">
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2027">2027</option>
+                                        <option value="2028">2028</option>
+                                        <option value="2029">2029</option>
+                                        <option value="2030">2023</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>8. Mes de inicio:</td>
+                                <td> <input type="number" id="p8" name="p8" class="form-goup">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>9. Esquema recibido:</td>
+                                <td><select name="p9" id="p9" placeholder="Selecione esquema" class="form-control"
+                                        autofocus>
+                                        <option value="">Selecione un esquema</option>
+                                        <option value="1">Esquema UNO</option>
+                                        <option value="2">Esquema TBMDR</option>
+                                    </select></td>
+                            </tr>
+
+                            <tr>
+                                <td>10. Año de término  tratamiento TB:</td>
+                                <td> 
+                                    <select name="p10" id="p10">
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2027">2027</option>
+                                        <option value="2028">2028</option>
+                                        <option value="2029">2029</option>
+                                        <option value="2030">2023</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>11. Mes de termino:</td>
+                                <td> <input type="number" id="p11" name="p11" class="form-goup">
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div><br>
+
+                    <table class="default" style="margin: 0 auto;">
+
+                        <tr>
+                            <td>12</td>
+                            <td>Número de veces que ha recibido tratamiento TBC:</td>
+                            <td colspan="2"><select name="p12" id="p12" placeholder="Selecione tratamiento"
+                                    class="form-control" autofocus>
+                                    <option value="0">Selecione una opción</option>
+                                    <option value="4">NO</option>
+                                    <option value="1">1 vez</option>
+                                    <option value="2">2 veces</option>
+                                    <option value="3">3 a más veces</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Se ha tomado una radiografía o placa de pulmón al terminar el tratamiento de TBC o
+                                después de terminar:</td>
+                            <td><input class="form-check-input" type="radio" name="p13" id="p13s" value="1">SI</td>
+                            <td><input class="form-check-input" type="radio" name="p13" id="p13n" value="0" checked="checked">NO</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="3">DESPUÉS DE TERMINAR TRATAMIENTO TBC: (marcar con una X sobre SI o NO, según
+                                corresponda)</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>Ha ido al médico por problemas respiratorios:</td>
+                            <td><input class="form-check-input" type="radio" name="p14" id="p14s" value="1">SI</td>
+                            <td><input class="form-check-input" type="radio" name="p14" id="p14n" checked="checked" value="0">NO</td>
+                        </tr>
+
+                        <tr>
+                            <td>15</td>
+                            <td>Ha ido a la farmacia por problemas respiratorios:</td>
+                            <td><input class="form-check-input" type="radio" name="p15" id="p15s" value="1">SI</td>
+                            <td><input class="form-check-input" type="radio" name="p15" id="p15n" checked="checked" value="0">NO</td>
+                        </tr>
+
+                        <tr>
+                            <td>16</td>
+                            <td>Ha ido a la posta médica por problemas respiratorios:</td>
+                            <td><input class="form-check-input" type="radio" name="p16" id="p16s" value="1">SI</td>
+                            <td><input class="form-check-input" type="radio" name="p16" id="p16n" checked="checked" value="0">NO</td>
+                        </tr>
+
+                        <tr>
+                            <td>17</td>
+                            <td>Ha tenido que ir al hospital por problemas respiratorios:</td>
+                            <td><input class="form-check-input" type="radio" name="p17" id="p17s" value="1">SI</td>
+                            <td><input class="form-check-input" type="radio" name="p17" id="p17n" checked="checked" value="0">NO</td>
+                        </tr>
+
+                        <tr>
+                            <td>18</td>
+                            <td>Ha tenido que hospitalizarse al menos 1 vez</td>
+                            <td><input class="form-check-input" type="radio" name="p18" id="p18s" value="1">SI</td>
+                            <td><input class="form-check-input" type="radio" name="p18" id="p18n" checked="checked" value="0">NO</td>
+                        </tr>
+
+                        <tr>
+                            <td>19</td>
+                            <td>Ha tenido que usar antibióticos para infección de los bronquios</td>
+                            <td><input class="form-check-input" type="radio" name="p19" id="p19s" value="1">SI</td>
+                            <td><input class="form-check-input" type="radio" name="p19" id="p19n" checked="checked" value="0">NO</td>
+                        </tr>
+
+                        <tr>
+                            <td>20</td>
+                            <td>Ha tenido alguna vez flema con sangre:</td>
+                            <td><input class="form-check-input" type="radio" name="p20" id="p20s" value="1">SI</td>
+                            <td><input class="form-check-input" type="radio" name="p20" id="p20n" checked="checked" value="0">NO</td>
+                        </tr>
+
+                        <tr>
+                            <td>21</td>
+                            <td>Ha tenido alguna vez fiebre:</td>
+                            <td><input class="form-check-input" type="radio" name="p21" id="p21s" value="1">SI</td>
+                            <td><input class="form-check-input" type="radio" name="p21" id="p21n" checked="checked" value="0">NO</td>
+                        </tr>
+
+                        <tr>
+                            <td>22</td>
+                            <td>Ha tenido alguna vez silbido de pecho o que suene como pito:</td>
+                            <td><input class="form-check-input" type="radio" name="p22" id="p22s" value="1">SI</td>
+                            <td><input class="form-check-input" type="radio" name="p22" id="p22n" checked="checked" value="0">NO</td>
+                        </tr>
+
+                        <tr>
+                            <td>23</td>
+                            <td>Se agita o le falta el aire al subir escaleras del primer piso al segundo piso:</td>
+                            <td><input class="form-check-input" type="radio" name="p23" id="p23s" value="1">SI</td>
+                            <td><input class="form-check-input" type="radio" name="p23" id="p23n" checked="checked" value="0">NO</td>
+                        </tr>
+
+                        <tr>
+                            <td>24</td>
+                            <td>¿Siente dolor en el pecho o espalda cuando respira o cuando tose?</td>
+                            <td><input class="form-check-input" type="radio" name="p24" id="p24s" value="1">SI</td>
+                            <td><input class="form-check-input" type="radio" name="p24" id="p24n" checked="checked" value="0">NO</td>
+                        </tr>
+
+                        <tr>
+                            <td>25</td>
+                            <td>¿ha tenido que dejar de trabajar o estudiar al menos un día a consecuencia de problemas
+                                respiratorios?</td>
+                            <td><input class="form-check-input" type="radio" name="p25" id="p25s" value="1">SI</td>
+                            <td><input class="form-check-input" type="radio" name="p25" id="p25n" checked="checked" value="0">NO</td>
+                        </tr>
+
+                        <tr>
+                            <td>26</td>
+                            <td>Algún médico le ha dicho que tiene bronquitis aguda o bronquitis crónica?</td>
+                            <td><input class="form-check-input" type="radio" name="p26" id="p26s" value="1">SI</td>
+                            <td><input class="form-check-input" type="radio" name="p26" id="p26n" checked="checked" value="0">NO</td>
+                        </tr>
+
+                        <tr>
+                            <td>27</td>
+                            <td>¿Lo han operado del pulmón durante el tratamiento de TBC o después de terminar?:</td>
+                            <td><input class="form-check-input" type="radio" name="p27" id="p27s" value="1">SI</td>
+                            <td><input class="form-check-input" type="radio" name="p27" id="p27n" checked="checked" value="0">NO</td>
+                        </tr>
+
+                        <tr>
+                            <td>28</td>
+                            <td>¿Antes de enfermar de TBC Ud. fumaba al menos 1 cigarrillo por semana?</td>
+                            <td><input class="form-check-input" type="radio" name="p28" id="p28s" value="1">SI</td>
+                            <td><input class="form-check-input" type="radio" name="p28" id="p28n" checked="checked" value="0">NO</td>
+                        </tr>
+                    </table>
+
+                </div>
+
+            </div>
+
+            <div id="Parte2" name="Parte2" class="tabcontent">
+                <p>DATOS DEL PACIENTE CON TBPFP OBTENIDO DE LA TARJETA DE TRATAMIENTO O DE LA HIST. CLÍNICA</p>
+                <table class="defaul" style="margin: 0 auto;">
+                    <tr>
+                        <td>29</td>
+                        <td>Resultado de examen de VIH al inicio de tratamiento:</td>
+                        <td><input class="form-check-input" type="radio" name="p29" id="p29s" value="1">Positivo</td>
+                        <td><input class="form-check-input" type="radio" name="p29" id="p29n" value="0">Negativo</td>
+                        <td><input class="form-check-input" type="radio" name="p29" id="p29i" checked="checked"  value="2">Sin información
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>30</td>
+                        <td>Se hizo despistaje de Diabetes al inicio de tratamiento</td>
+                        <td><input class="form-check-input" type="radio" name="p30" id="p30s" value="1">SI</td>
+                        <td><input class="form-check-input" type="radio" name="p30" id="p30n" value="0">NO</td>
+                        <td><input class="form-check-input" type="radio" name="p30" id="p30i" checked="checked"  value="2">Sin información
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>31</td>
+                        <td>El resultado de examen de Glucosa en ayunas fue: (indicar el valor numérico de la
+                            glicemia tomada al inicio de tratamiento TBC)</td>
+                        <td colspan="3"><input class="form-goup" type="number" name="p31" id="p31" min="0"
+                                oninput="validity.valid||(value='');"  autofocus><br></td>
+                    </tr>
+                    <tr>
+                        <td>32</td>
+                        <td>Baciloscopía inicial</td>
+                        <td colspan="3"><select name="p32" id="p32" placeholder="Selecione opción"
+                                class="form-control" autofocus>
+                                <option value="0">Selecione una opción</option>
+                                <option value="1">1+</option>
+                                <option value="2">2+</option>
+                                <option value="3">3+</option>
+                                <option value="4">Menos de 1+</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td>33</td>
+                        <td>Baciloscopía al final del tratamiento</td>
+                        <td><input class="form-check-input" type="radio" name="p33" id="p33s" value="1">Positivo</td>
+                        <td><input class="form-check-input" type="radio" name="p33" id="p33n" value="0">Negativo</td>
+                        <td><input class="form-check-input" type="radio" name="p33" id="p33i" checked="checked"  value="2">Sin información</td>
+                    </tr>
+                    <tr>
+                        <td>34</td>
+                        <td>Esquema recibido:</td>
+                        <td colspan="3"><select name="p34" id="p34" class="form-control" autofocus>
+                                <option value="0">Selecione un esquema</option>
+                                <option value="1">Esquema UNO</option>
+                                <option value="2">Esquema TBMDR</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td>35</td>
+                        <td>Resultado de cultivo de Mycobacterium tuberculosis (M.tb) al inicio de tratamiento</td>
+                        <td><input class="form-check-input" type="radio" name="p35" id="p35s" value="1">Positivo</td>
+                        <td><input class="form-check-input" type="radio" name="p35" id="p35n" value="0">Negativo</td>
+                        <td><input class="form-check-input" type="radio" name="p35" id="p35i" checked="checked"  value="2">Sin información
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>36</td>
+                        <td>Resultado de Cultivo al final de tratamiento (solo en casos de TBMDR)</td>
+                        <td><input class="form-check-input" type="radio" name="p36" id="p36s" value="1">Positivo</td>
+                        <td><input class="form-check-input" type="radio" name="p36" id="p36n" value="0">Negativo</td>
+                        <td><input class="form-check-input" type="radio" name="p36" id="p36i" checked="checked"  value="2">Sin información
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>37</td>
+                        <td>Se hizo prueba de sensibilidad al inicio de tratamiento</td>
+                        <td><input class="form-check-input" type="radio" name="p37" id="p37s" value="1">SI</td>
+                        <td><input class="form-check-input" type="radio" name="p37" id="p37n" value="0">NO</td>
+                        <td><input class="form-check-input" type="radio" name="p37" id="p37i" checked="checked"  value="2">Sin información
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>38</td>
+                        <td>Fecha de la prueba de sensibilidad</td>
+                        <td colspan="3"><input class="form-control" type="date" name="p38" id="p38" min="0"
+                                placeholder="Fecha" autofocus></td>
+                    </tr>
+
+                    <tr>
+                        <td>39</td>
+                        <td>Nombre de la prueba de sensibilidad realizada: (marcar con una X)</td>
+                        <td colspan="2">
+                            <input type="checkbox" name="p391" class="form-check-input" id="p391x">XPERT-TB<br>
+                            <input type="checkbox" name="p392" class="form-goup" id="p392g">GENOTYPE<br>
+                            <input type="checkbox" name="p393" class="form-goup" id="p393m">MODS<br>
+                        </td>
+                        <td><input type="checkbox" name="p394" class="form-goup" id="p394b">BATEC<br>
+                            <input type="checkbox" name="p395" class="form-goup" id="p395o">OTRO<br>
+                            <input type="text" name="p39d" class="form-goup" id="p39d" placeholder="Escriba aqui">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td colspan="4">RESULTADO DE LA PRUEBA DE SENSIBILIDAD:</td>
+                    </tr>
+
+                    <tr>
+                        <td>41</td>
+                        <td>SENSIBLE A: (marcar con una X)</td>
+                        <td colspan="3"><select name="p41" id="p41" class="form-control" autofocus>
+                                <option value="0">Selecione una opción</option>
+                                <option value="1">R</option>
+                                <option value="2">H</option>
+                                <option value="3">RH</option>
+                                <option value="4">Otras droga más</option>
+                            </select><br>
+                            <input type="text" id="p41d" name="p41d" placeholder="Escriba la droga" class="form-control"
+                                autofocus>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>42</td>
+                        <td>RESISTENTE A: (marcar con una X)</td>
+                        <td colspan="3"><select name="p42" id="p42" class="form-control" autofocus>
+                                <option value="0">Selecione una opción</option>
+                                <option value="1">R</option>
+                                <option value="2">H</option>
+                                <option value="3">RH</option>
+                                <option value="4">Otra droga más</option>
+                            </select><br>
+                            <input type="text" id="p42d" name="p42d" placeholder="Escriba la droga" class="form-control"
+                                autofocus>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>43</td>
+                        <td>Tiene radiografía de tórax al inicio de tratamiento</td>
+                        <td><input class="form-check-input" type="radio" name="p43" id="p43s" value="1">SI</td>
+                        <td><input class="form-check-input" type="radio" name="p43" id="p43n" value="0">NO</td>
+                        <td><input class="form-check-input" type="radio" name="p43" id="p43i" checked="checked"  value="2">Sin información
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>44</td>
+                        <td>Tiene radiografía de tórax al final de tratamiento.</td>
+                        <td><input class="form-check-input" type="radio" name="p44" id="p44s" value="1">SI</td>
+                        <td><input class="form-check-input" type="radio" name="p44" id="p44n" value="0">NO</td>
+                        <td><input class="form-check-input" type="radio" name="p44" id="p44i" checked="checked"  value="2">Sin información
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="2">45</td>
+                        <td rowspan="2">Tiene tomografía de tórax al inicio o durante el tratamiento: fecha:</td>
+                        <td><input class="form-check-input" type="radio" name="p45" id="p45s" value="1">SI</td>
+                        <td><input class="form-check-input" type="radio" name="p45" id="p45n" value="0">NO</td>
+                        <td><input class="form-check-input" type="radio" name="p45" id="p45i" checked="checked"  value="2">Sin información
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="3"><input class="form-control" type="date" name="p45d" id="p45d" min="0"
+                                placeholder="Fecha" autofocus></td>
+                    </tr>
+
+                    <tr>
+                        <td>46</td>
+                        <td>¿El paciente ha sido operado del pulmón durante tratamiento de TBC o después de terminar?
+                        </td>
+                        <td><input class="form-check-input" type="radio" name="p46" id="p46s" value="1">SI</td>
+                        <td><input class="form-check-input" type="radio" name="p46" id="p46n" value="0">NO</td>
+                        <td><input class="form-check-input" type="radio" name="p46" id="p46i" checked="checked"  value="2">Sin información
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <div id="Parte3" class="tabcontent">
+
+                <div class="form-group">
+                    47. Fecha de radiografía: <input class="form-control" type="date" class="form-group" name="p47"
+                        id="p47" min="0" placeholder="Fecha" autofocus>
+                </div><br>
+
+                <div>
+                    48. Lector<select name="p48" id="p48" class="form-control" autofocus>
+                        <option value="0">Selecione un lector</option>
+                        <option value="1">Jave Castillo</option>
+                        <option value="2">Uribe Barreto</option>
+                    </select>
+                </div><br>
+
+                <table class="default" style="margin: 0 auto;">
+
+                    <tr>
+                        <th rowspan="2"></th>
+                        <th rowspan="2">
+                            <center>No</center>
+                        </th>
+                        <th colspan="4">
+                            <center>TÓRAX DER.</center>
+                        </th>
+                        <th colspan="4">
+                            <center>TÓRAX IZQ.</center>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                    </tr>
+
+                    <tr>
+                        <th>50. Cavidad pulmonar
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p50n" name="p50n">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p501" name="p501">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p502" name="p502">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p503" name="p503">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p504" name="p504">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p505" name="p505">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p506" name="p506">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p507" name="p507">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p508" name="p508">
+                        </td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>51. Cavidad tamaño
+                        <td colspan="9"><input class="form-control" type="text" name="p51" id="p51" min="0"
+                                placeholder="cm" autofocus>
+                        </td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>52. Bqtasia cilíndrica
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p52n" name="p52n">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p521" name="p521">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p522" name="p522">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p523" name="p523">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p524" name="p524">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p525" name="p525">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p526" name="p526">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p527" name="p527">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p528" name="p528">
+                        </td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>53. Bqtasia sacular
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p53n" name="p53n">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p531" name="p531">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p532" name="p532">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p533" name="p533">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p534" name="p534">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p535" name="p535">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p536" name="p536">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p537" name="p537">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p538" name="p538">
+                        </td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>54. Bqtasia quística
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p54n" name="p54n">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p541" name="p541">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p542" name="p542">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p543" name="p543">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p544" name="p544">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p545" name="p545">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p546" name="p546">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p547" name="p547">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p548" name="p548">
+                        </td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>55. Fibrosis secuelar
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p55n" name="p55n">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p551" name="p551">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p552" name="p552">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p553" name="p553">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p554" name="p554">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p555" name="p555">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p556" name="p556">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p557" name="p557">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p558" name="p558">
+                        </td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>56. Paquipleuritis
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p56n" name="p56n">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p561" name="p561">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p562" name="p562">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p563" name="p563">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p564" name="p564">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p565" name="p565">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p566" name="p566">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p567" name="p567">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p568" name="p568">
+                        </td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>57. Desviación tráquea
+                        <td style="text-align: center; ">
+                            <input type="radio" class="form-goup" id="p57n" name="p57" value="0" checked="checked">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="radio" class="form-goup" id="p57s" name="p57" value="1">Si
+                        </td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>58. Desviación de mediastino
+                        <td style="text-align: center; ">
+                            <input type="radio" class="form-goup" id="p58n" name="p58" value="0" checked="checked">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="radio" class="form-goup" id="p58s" name="p58" value="1">Si
+                        </td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>59. Elevación diafragma
+                        <td style="text-align: center; ">
+                            <input type="radio" class="form-goup" id="p59n" name="p59" value="0" checked="checked">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="radio" class="form-goup" id="p59s" name="p59" value="1">Si
+                        </td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>60. Obturación ángulo diafragmát.
+                        <td style="text-align: center; ">
+                            <input type="radio" class="form-goup" id="p60n" name="p60" value="0" checked="checked">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="radio" class="form-goup" id="p60s" name="p60" value="1">Si
+                        </td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>61. Micetoma
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p61n" name="p61n" value="0">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p611" name="p611" value="1">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p612" name="p612" value="2">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p613" name="p613" value="3">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p614" name="p614" value="4">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p615" name="p615" value="5">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p616" name="p616" value="6">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p617" name="p617" value="7">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p618" name="p618" value="8">
+                        </td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>62. Atelectasia
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p62n" name="p62n" value="0">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p621" name="p621" value="1">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p622" name="p622" value="2">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p623" name="p623" value="3">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p624" name="p624" value="4">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p625" name="p625" value="5">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p626" name="p626" value="6">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p627" name="p627" value="7">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p628" name="p628" value="8">
+                        </td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>63. Consolidación
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p63n" name="p63n" value="0">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p631" name="p631" value="1">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p632" name="p632" value="2">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p633" name="p633" value="3">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p634" name="p634" value="4">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p635" name="p635" value="5">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p636" name="p636" value="6">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p637" name="p637" value="7">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p638" name="p638" value="8">
+                        </td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>64. Calcificación
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p64n" name="p64n" value="0">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p641" name="p641" value="1">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p642" name="p642" value="2">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p643" name="p643" value="3">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p644" name="p644" value="4">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p645" name="p645" value="5">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p646" name="p646" value="6">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p647" name="p647" value="7">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p648" name="p648" value="8">
+                        </td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>65. Secuela extensa
+                        <td style="text-align: center; ">
+                            <input type="radio" class="form-goup" id="p65n" name="p65" value="0" checked="checked">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="radio" class="form-goup" id="p65s" name="p65" value="1">Si
+                        </td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>66. Enfisema
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p66n" name="p66n" value="0">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p661" name="p661" value="1">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p662" name="p662" value="2">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p663" name="p663" value="3">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p664" name="p664" value="4">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p665" name="p665" value="5">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p666" name="p666" value="6">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p667" name="p667" value="7">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p668" name="p668" value="8">
+                        </td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>67. NORMAL
+                        <td style="text-align: center; ">
+                            <input type="radio" class="form-goup" id="p67n" name="p67" value="0" checked="checked">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="radio" class="form-goup" id="p67s" name="p67" value="1">Si
+                        </td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        </th>
+                    </tr>
+
+                </table><br>
+
+            </div>
+
+            <div id="Parte4" class="tabcontent">
+
+                <div>
+                    68. Se realizo la tomografía:<select name="p68" id="p68" class="form-control" autofocus>
+                        <option value="0">No</option>
+                        <option value="1">Si</option>                        
+                    </select>
+                </div><br>
+
+                <div class="form-group">
+                    69. Fecha de tomografía: <input class="form-control" type="date" class="form-group" name="p69"
+                        id="p69" min="0" placeholder="Fecha" autofocus>
+                </div><br>
+
+                <div>
+                    Lector<select name="p691" id="p691" class="form-control" autofocus>
+                        <option value="0">Selecione un lector</option>
+                        <option value="1">Jave Castillo</option>
+                        <option value="2">Uribe Barreto</option>
+                    </select>
+                </div><br>
+
+                <table class="default" style="margin: 0 auto;">
+
+                    <tr>
+                        <th rowspan="2"></th>
+                        <th rowspan="2">
+                            <center>No</center>
+                        </th>
+                        <th colspan="4">
+                            <center>TÓRAX DER.</center>
+                        </th>
+                        <th colspan="4">
+                            <center>TÓRAX IZQ.</center>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                    </tr>
+
+                    <tr>
+                        <th>70. Cavidad pulmonar
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p70n" name="p70n" value="0">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p701" name="p701" value="1">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p702" name="p702" value="2">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p703" name="p703" value="3">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p704" name="p704" value="4">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p705" name="p705" value="5">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p706" name="p706" value="6">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p707" name="p707" value="7">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p708" name="p708" value="8">
+                        </td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>71. Cavidad tamaño
+                        <td colspan="9"><input class="form-control" type="text" name="p71" id="p71" min="0"
+                                placeholder="cm" autofocus>
+                        </td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>72. Bqtasia cilíndrica
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p72n" name="p72n" value="0">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p721" name="p721" value="1">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p722" name="p722" value="2">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p723" name="p723" value="3">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p724" name="p724" value="4">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p725" name="p725" value="5">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p726" name="p726" value="6">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p727" name="p727" value="7">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p728" name="p728" value="8">
+                        </td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>73. Bqtasia sacular
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p73n" name="p73n" value="0">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p731" name="p731" value="1">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p732" name="p732" value="2">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p733" name="p733" value="3">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p734" name="p734" value="4">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p735" name="p735" value="5">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p736" name="p736" value="6">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p737" name="p737" value="7">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p738" name="p738" value="8">
+                        </td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>74. Bqtasia quística
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p74n" name="p74n" value="0">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p741" name="p741" value="1">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p742" name="p742" value="2">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p743" name="p743" value="3">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p744" name="p744" value="4">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p745" name="p745" value="5">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p746" name="p746" value="6">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p747" name="p747" value="7">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p748" name="p748" value="8">
+                        </td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>75. Fibrosis secuelar
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p75n" name="p75n" value="0">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p751" name="p751" value="1">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p752" name="p752" value="2">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p753" name="p753" value="3">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p754" name="p754" value="4">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p755" name="p755" value="5">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p756" name="p756" value="6">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p757" name="p757" value="7">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p758" name="p758" value="8">
+                        </td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>76. Paquipleuritis
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p76n" name="p76n" value="0">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p761" name="p761" value="1">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p762" name="p762" value="2">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p763" name="p763" value="3">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p764" name="p764" value="4">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p765" name="p765" value="5">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p766" name="p766" value="6">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p767" name="p767" value="7">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p768" name="p768" value="8">
+                        </td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>77. Desviación tráquea
+                        <td style="text-align: center; ">
+                            <input type="radio" class="form-goup" id="p77n" name="p77" value="0" checked="checked">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="radio" class="form-goup" id="p77s" name="p77" value="1">Si
+                        </td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>78. Desviación de mediastino
+                        <td style="text-align: center; ">
+                            <input type="radio" class="form-goup" id="p78n" name="p78" value="0" checked="checked">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="radio" class="form-goup" id="p78s" name="p78" value="1">Si
+                        </td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>79. Elevación diafragma
+                        <td style="text-align: center; ">
+                            <input type="radio" class="form-goup" id="p79n" name="p79" value="0" checked="checked">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="radio" class="form-goup" id="p79s" name="p79" value="1">Si
+                        </td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>80. Obturación ángulo diafragmát.
+                        <td style="text-align: center; ">
+                            <input type="radio" class="form-goup" id="p80n" name="p80" value="0" checked="checked">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="radio" class="form-goup" id="p80s" name="p80" value="1">Si
+                        </td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>81. Micetoma
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p81n" name="p81n" value="0">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p811" name="p811" value="1">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p812" name="p812" value="2">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p813" name="p813" value="3">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p814" name="p814" value="4">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p815" name="p815" value="5">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p816" name="p816" value="6">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p817" name="p817" value="7">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p818" name="p818" value="8">
+                        </td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>82. Atelectasia
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p82n" name="p82n" value="0">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p821" name="p821" value="1">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p822" name="p822" value="2">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p823" name="p823" value="3">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p824" name="p824" value="4">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p825" name="p825" value="5">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p826" name="p826" value="6">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p827" name="p827" value="7">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p828" name="p828" value="8">
+                        </td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>83. Consolidación
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p83n" name="p83n" value="0">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p831" name="p831" value="1">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p832" name="p832" value="2">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p833" name="p833" value="3">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p834" name="p834" value="4">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p835" name="p835" value="5">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p836" name="p836" value="6">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p837" name="p837" value="7">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p838" name="p838" value="8">
+                        </td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>84. Calcificación
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p84n" name="p84n" value="0">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p841" name="p841" value="1">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p842" name="p842" value="2">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p843" name="p843" value="3">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p844" name="p844" value="4">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p845" name="p845" value="5">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p846" name="p846" value="6">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p847" name="p847" value="7">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p848" name="p848" value="8">
+                        </td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>85. Secuela extensa
+                        <td style="text-align: center; ">
+                            <input type="radio" class="form-goup" id="p85n" name="p85" value="0" checked="checked">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="radio" class="form-goup" id="p85s" name="p85" value="1">Si
+                        </td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>86. Enfisema
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p86n" name="p86n" value="0">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p861" name="p861" value="1">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p862" name="p862" value="2">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p863" name="p863" value="3">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p864" name="p864" value="4">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p865" name="p865" value="5">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p866" name="p866" value="6">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p867" name="p867" value="7">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="checkbox" class="form-goup" id="p868" name="p868" value="8">
+                        </td>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>87. NORMAL
+                        <td style="text-align: center; ">
+                            <input type="radio" class="form-goup" id="p87n" name="p87" value="0" checked="checked">
+                        </td>
+                        <td style="text-align: center; ">
+                            <input type="radio" class="form-goup" id="p87s" name="p87" value="1">Si
+                        </td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        <td style="background-color: gray;"></td>
+                        </th>
+                    </tr>
+
+                </table><br>
+
+            </div>
+
+        </form>
+        <div>
+            <button id="btn-save" name="btn-save" class="btn btn-primary" onclick="guardar_usuario()">
+                Guardar</button>
+        </div><br>
+
+        <script src="tab.js"></script>
+        <script src="menu.js"></script>
+        <script src="app.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </main>
+</body>
+
+</html>
